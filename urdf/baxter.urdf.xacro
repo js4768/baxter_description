@@ -3,6 +3,7 @@
 
   <xacro:arg name="gazebo" default="false"/>
   <xacro:arg name="pedestal" default="true"/>
+  <xacro:include filename="$(find baxter_description)/urdf/common.xacro" />
   <!-- Baxter Base URDF -->
   <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.urdf.xacro">
     <xacro:arg name="gazebo" value="${gazebo}"/>
@@ -24,6 +25,6 @@
   <!-- Kinect2 xacro -->
     <xacro:include filename="$(find baxter_description)/urdf/sensors/kinect2.urdf.xacro" />
     <xacro:kinect2_v0 name="head_mount" parent="base" >
-      <origin xyz="0.2 0 0.091746" rpy="0 0 0" />
+      <origin xyz="0 0 0.45" rpy="0 0.9 0" />
     </xacro:kinect2_v0>
 </robot>
